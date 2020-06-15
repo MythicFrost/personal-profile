@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="styles.css">
+
 <nav>
 <a href="#">Introduction</a>
 <a href="#">More About Me</a>
