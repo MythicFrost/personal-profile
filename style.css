@@ -1,9 +1,25 @@
-nav {
-    background: red;
-}
+/* list
+
+setup
+fonts
+general
+intro
+
+
+*/
+
+/* ----------------- #setup ----------------- */
 
 body {
     font-size: 10px; /* so 1rem = 10px */
+    margin: 0;
+    font-family: "Roboto", "Open Sans";
+    font-weight: 300;
+}
+
+:root {
+    --link-colour: #0B88FF;
+    --link-highlight-colour: #339cff;
 }
 
 .container-lg h1:first-child {
@@ -20,3 +36,283 @@ body {
     font-size: 2rem;
     max-width: none;
 }
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 8px;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.mb-small {
+    margin-bottom: 10px;
+}
+.mb-zero {
+    margin-bottom: 0;
+}
+
+/* ----------------- #fonts ----------------- */
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 300;
+    src: url("/fonts/roboto-light.woff2") format("woff2"), url("/fonts/roboto-light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    src: url("/fonts/roboto-medium.woff2") format("woff2"), url("/fonts/roboto-medium.woff") format("woff");
+}
+
+/* ----------------- #general ----------------- */
+
+.site-content {
+    font-size: 14px;
+    font-size: 1.4rem;
+    overflow: hidden;
+}
+
+.wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.sep {
+    background: var(--link-colour);
+    width: 100%;
+    height: 2px;
+    margin: 0 auto;
+}
+
+.nav-sep {
+    margin-top: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+
+.primary-menu {
+    display: inline-block;
+}
+
+.block {
+    padding: 40px 0;
+}
+
+.ac-tab-label {
+    user-select: none;
+    background: #eee;
+    color: black;
+    padding: 10px 20px;
+    float: left;
+    cursor: pointer;
+}
+
+
+
+.ac-tab-input:checked + .ac-tab-label {
+    background: var(--link-colour);
+    color: white;
+}
+/*
+
+background: var(--link-colour);
+
+*/
+.ac-tab-input {
+    display: none;
+}
+
+.clearfix::before, .clearfix::after {
+    display: block;
+    content: "";
+}
+.clearfix::after {
+    clear: both;
+}
+
+.button {
+    padding: 15px 20px;
+    background: var(--link-colour);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.button:hover, .button:focus {
+    background: var(--link-highlight-colour);
+}
+
+/* ----------------- #intro ----------------- */
+
+.block-intro {
+    width: 100vw;
+    min-height: 100vh;
+    min-height: calc(100vh - 68px);
+    background: #eee;
+    display: flex;
+    padding: 0;
+    position: relative;
+}
+
+.intro-wrap {
+    align-self: center;
+    position: relative;
+    background: white;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.intro-container {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-column-gap: 4%;
+}
+
+.block-intro .background-image-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;    
+}
+
+.block-intro .background-image {
+    max-height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.intro-text-container {
+    padding: 20px;
+}
+
+.intro-portrait {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ----------------- #about ----------------- */
+
+.block-about {
+    background: #eee;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-column-gap: 4%;
+    
+}
+
+/* ----------------- #job ----------------- */
+
+.ac-job .tab1, .ac-job .tab2 {
+    display: none;
+}
+
+#tab-job1:checked ~ .tab1  {
+    display: block;
+}
+#tab-job2:checked ~ .tab2  {
+    display: block;
+}
+
+.accordion-job ~ #tab-job1 .tab1 {
+    display: block;
+}
+
+.job-grid-container {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-column-gap: 4%;
+}
+
+.ac-job .ac-tab {
+    margin-top: 20px;
+    background: #eee;
+    padding: 20px;
+}
+
+.job-sep {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background: #333;
+}
+
+
+/* Future */
+
+.job-future-container {
+    padding: 40px 0;
+    position: relative;
+    
+}
+.job-background-image {
+    filter: brightness(30%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.job-wrap {
+    grid-template-columns: 48% 48%;
+    grid-column-gap: 4%;
+    display: grid;
+    position: relative;
+}
+
+.job-wrap .grid-item-1 {
+    background: white;
+    padding: 20px;
+}
+.job-wrap .grid-item-2 {
+    color: white;
+}
+
+@media only screen and (max-width: 800px) {
+    .job-background-image {
+        background-image: url('/images/code-low-res.jpg');
+    }
+}
+@media only screen and (max-width: 1400px) and (min-width: 801px) {
+    .job-background-image {
+        background-image: url('/images/code-med-res.jpg');
+    }
+}
+@media only screen and (min-width: 1401px) {
+    .job-background-image {
+        background-image: url('/images/code-hi-res.jpg');
+    }
+}
+
+
+
+
+/* ----------------- #job ----------------- */
+
+
