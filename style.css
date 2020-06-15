@@ -2,16 +2,21 @@ nav {
     background: red;
 }
 
+body {
+    font-size: 10px; /* so 1rem = 10px */
+}
+
 .container-lg h1:first-child {
     display: none;
 }
 
-body .container-lg {
-    max-width: none;
-    padding: none;
+.container-lg.px-3.my-5 {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .container-lg {
     font-size: 20px;
     font-size: 2rem;
+    max-width: none;
 }

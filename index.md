@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="style.css">
+<script src="scripts.js"></script>
 
 <nav class="nav">
     <a href="#">Introduction</a>
