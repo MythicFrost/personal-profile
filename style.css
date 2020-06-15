@@ -55,6 +55,10 @@ a:hover, a:focus {
     text-decoration: underline;
 }
 
+blockquote {
+    font-style: italic;
+}
+
 p {
     margin-top: 0;
     margin-bottom: 30px;
@@ -88,6 +92,7 @@ p {
     font-size: 14px;
     font-size: 1.4rem;
     overflow: hidden;
+    position: relative;
 }
 
 .wrap {
@@ -111,20 +116,48 @@ header {
     margin-top: 20px;
 }
 
-nav a {
-    text-decoration: none;
-    padding: 10px;
-    text-transform: uppercase;
+.menu-wrap {
+    position: relative;
+    float: left;
+    left: 50%;
+    transform: translateX(-50%);
 }
-
 
 .primary-menu {
     display: inline-block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    background: white;
+    padding: 0;
+    border-bottom: 4px solid var(--link-colour);
+    font-size: 1.1rem;
+    overflow: hidden;
 }
+
+.primary-menu a {
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    float: left;
+    transition: 0.25s;
+    position: relative;
+}
+
+.primary-menu a:hover {
+    background: var(--link-colour);
+    color: white;
+    
+}
+
 
 .block {
     padding: 40px 0;
 }
+
+
 
 .ac-tab-label {
     user-select: none;
@@ -135,17 +168,21 @@ nav a {
     cursor: pointer;
 }
 
+.ac-tab-label:not(:checked):hover {
+    background: #ddd;
+}
+
 
 
 .ac-tab-input:checked + .ac-tab-label {
     background: var(--link-colour);
     color: white;
 }
-/*
 
-background: var(--link-colour);
+.accordion .ac-tab {
+    display: none;
+}
 
-*/
 .ac-tab-input {
     display: none;
 }
@@ -171,6 +208,7 @@ background: var(--link-colour);
 
 .button:hover, .button:focus {
     background: var(--link-highlight-colour);
+    color: white;
 }
 
 /* ----------------- #intro ----------------- */
@@ -235,9 +273,7 @@ background: var(--link-colour);
 
 /* ----------------- #job ----------------- */
 
-.ac-job .tab1, .ac-job .tab2 {
-    display: none;
-}
+
 
 #tab-job1:checked ~ .tab1  {
     display: block;
@@ -246,9 +282,9 @@ background: var(--link-colour);
     display: block;
 }
 
-.accordion-job ~ #tab-job1 .tab1 {
+/* .accordion-job ~ #tab-job1 .tab1 {
     display: block;
-}
+} */
 
 .job-grid-container {
     display: grid;
@@ -321,6 +357,55 @@ background: var(--link-colour);
 
 
 
-/* ----------------- #job ----------------- */
+/* ----------------- #profile ----------------- */
 
+.block-profile {
+    background: #eee;
+}
+
+.profile-container {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-column-gap: 4%;
+}
+
+#tab-g1:checked ~ .tab1  {
+    display: block;
+}
+#tab-g2:checked ~ .tab2  {
+    display: block;
+}
+.ac-graph .ac-tab {
+    background: #eee;
+    padding: 20px;
+    padding-left: 0;
+}
+
+
+
+/* ----------------- #project ----------------- */
+
+.block-project {
+    position: relative;
+}
+
+.project-wrap {
+    position: relative;
+}
+
+.project-headline {
+    color: white;
+}
+
+.project-background-image {
+    filter: brightness(30%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url("images/project-hi-res.jpg");
+}
 
