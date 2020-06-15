@@ -1,3 +1,14 @@
 nav {
     background: red;
 }
+
+.container-lg h1:first-child {
+    display: none;
+}
+
+.container-lg {
+    font-size: 20px;
+    font-size: 2rem;
+    max-width: none;
+    padding: none;
+}

@@ -1,0 +1,1 @@
+var test = document.body.getElementsByClassName('nav');

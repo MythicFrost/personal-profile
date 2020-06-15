@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="style.css">
 
-<nav>
+<nav class="nav">
 <a href="#">Introduction</a>
 <a href="#">More About Me</a>
 <a href="#">Personal Profile</a>
