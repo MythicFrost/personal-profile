@@ -101,7 +101,7 @@ p {
 }
 
 header {
-    padding-top: 20px;
+    /* padding-top: 20px; */
     text-align: center;
 }
 
@@ -128,22 +128,24 @@ header {
     position: fixed;
     left: 0;
     right: 0;
-    top: 0;
+    bottom: 0;
     z-index: 99;
-    background: white;
+    background: var(--link-colour);
     padding: 0;
-    border-bottom: 4px solid var(--link-colour);
+    border-top: 4px solid var(--link-colour);
     font-size: 1.1rem;
     overflow: hidden;
 }
 
 .primary-menu a {
     text-decoration: none;
-    padding: 10px;
+    padding: 20px;
+    padding-bottom: 25px;
     text-transform: uppercase;
     float: left;
     transition: 0.25s;
     position: relative;
+    color: white;
 }
 
 .primary-menu a:hover {
@@ -217,36 +219,54 @@ header {
     width: 100vw;
     min-height: 100vh;
     min-height: calc(100vh - 68px);
-    background: #eee;
     display: flex;
     padding: 0;
     position: relative;
+    color: white;
 }
 
 .intro-wrap {
     align-self: center;
     position: relative;
-    background: white;
+    /* background: white; */
     margin-top: 80px;
     margin-bottom: 80px;
 }
 
+.intro-title {
+    font-size: 3rem;
+    margin-top: 20px;
+    text-shadow: 0px 0px 10px black;
+}
+
 .intro-container {
-    display: grid;
+    display: block;
+    /* display: grid;
     grid-template-columns: 48% 48%;
-    grid-column-gap: 4%;
+    grid-column-gap: 4%; */
+    text-shadow: 0px 0px 5px black;
+    max-width: 1000px;
+}
+
+.intro-title {
+    padding-bottom: 20px;
+    display: inline-block;
+    border-bottom: 4px solid white;
+    margin-bottom: 40px;
 }
 
 .block-intro .background-image-container {
     position: absolute;
     top: 0;
-    bottom: 0;    
+    bottom: 0;
 }
 
 .block-intro .background-image {
     max-height: 100%;
     object-fit: cover;
     width: 100%;
+    height: 100%;
+    filter: brightness(0.5);
 }
 
 .intro-text-container {
@@ -256,6 +276,11 @@ header {
 .intro-portrait {
     height: 100%;
     object-fit: cover;
+    max-height: 50%;
+    border-radius: 50%;
+    max-height: 300px;
+    float: right;
+    margin-left: 50px;
 }
 
 /* ----------------- #about ----------------- */
@@ -272,6 +297,10 @@ header {
 }
 
 /* ----------------- #job ----------------- */
+
+.block-job {
+    padding-bottom: 0;
+}
 
 
 

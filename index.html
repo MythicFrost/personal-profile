@@ -15,7 +15,7 @@
                 </div>
             </nav>
         
-        <div class="nav-sep sep"></div>
+        <!-- <div class="nav-sep sep"></div> -->
     </header>
     <section id="introduction" class="block block-intro">
         <picture class="background-image-container">
@@ -24,24 +24,22 @@
         </picture>
         <div class="wrap intro-wrap">
             <div class="intro-container">
-                <div class="intro-text-container grid-item">
-                    <h3 class="intro-title">Christopher John Searson</h3>
-                    <p class="intro-student-number mb-zero">s3866806</p>
-                    <a href="">s3866806@student.rmit.edu.au</a>
-                    <h3 class="headline">Background & Interests</h3>
-                    <p>
-                        I was born in Sydney in 1991 and when I was about 4 years old my family moved up to the Gold Coast and I've been living here ever since. I was homeschooled until about age 16.
-                    </p>
-                    <p>
-                        I enjoy spending time with friends, PC gaming, rollerskating, ice skating and tennis. As a young teen I wanted to be a professional tennis player, however I had to pull out at age 16; I continue to play socially.
-                    </p>
-                    <p>
-                            I have been learning Hebrew for 7 years and speak it reasonably well, and I have dabbled in Japanese; I would like to reach near native fluency in both languages one day. Other languages also interest me. 
-                    </p>
-                </div>
-                <div class="grid-item">
-                    <img class="intro-portrait" src="images/self-portrait.jpg" alt="picture of Christopher Searson" />
-                </div>
+                <h3 class="intro-title">Christopher John Searson</h3>
+                <img class="intro-portrait" src="images/self-portrait.jpg" alt="picture of Christopher Searson" />
+                <!-- <p class="intro-student-number mb-zero">s3866806</p>
+                <a href="">s3866806@student.rmit.edu.au</a> -->
+                <h3 class="headline">Background & Interests</h3>
+                
+                <p>
+                    I was born in Sydney in 1991 and when I was about 4 years old my family moved up to the Gold Coast and I've been living here ever since. I was homeschooled until about age 16.
+                </p>
+                <p>
+                    I enjoy spending time with friends, PC gaming, rollerskating, ice skating and tennis. As a young teen I wanted to be a professional tennis player, however I had to pull out at age 16; I continue to play socially.
+                </p>
+                <p>
+                        I have been learning Hebrew for 7 years and speak it reasonably well, and I have dabbled in Japanese; I would like to reach near native fluency in both languages one day. Other languages also interest me. 
+                </p>
+                
             </div>
         </div>
     </section>
@@ -220,12 +218,53 @@
         </div>
         <div class="wrap project-wrap"> 
             <header><h2 class="headline project-headline">Project Idea</h2></header>
+            <h3>Overview</h3>
+            <p>My project idea is an app for bible study. Initially the project would begin as a web app that works on both desktop and smartphone; following that, an app for Android and then for iOS would be released.</p>
+            <p>There are many books in the bible, with many chapters and verses across a large number of topics; this app's purpose is to make it easy to keep lists of scriptures sorted by user created tags (topics.) It also adds an aspect of community to it as the user can see what tags and scriptures that others have added.</p>
+            <p>The app will display a screen of tags (E.G., "law", "mercy", "love", "messianic prophecy", "dietary laws") that have been added by both themselves and other users. When clicking on a tag (for example "love") it will show all the scriptures that have had that tag added to them.</p>
+            <p>The app will also display a screen where the user can look up scriptures and apply tags that they’ve created.</p>
+            <h3>Motivation</h3>
+            <p>Christianity is the largest religious group in the world with 2.3 billion believers as of 2015. (Hackett and Mcclendon, 2017)</p>>
+            <p>This app may appeal to those who are interested in improving their knowledge of the bible, debating or studying specific topics, or even just randomly exploring other topics with which they may not be very familar.</p>
+            <p>I myself read the bible very often and would appreciate being able to use this app to keep track of scriptures on particular topics for both debating and studying purposes.</p>
+            <h3>Description</h3>
+            <p>As stated above, the app allows users to create their own tags which they can apply to various scriptures. They can then view all the scriptures associated with a given tag.</p>
+            <p>The user can browse just their own tags and scriptures, or all users’ tags and scriptures.</p>
+            <p>There is no need to sign up to use the app – the user can view other users’ tags, and the verses which have been tagged; however, in order to create your own tags, apply them to scriptures, and to actually read a translation of the scripture (E.G., the NIV) the user must sign up.</p>
+            <p>Bible related ads at the top of the app will cover necessary hosting costs. There is no fee for the user to sign up; however, it would be possible to remove the ads for a monthly fee.</p>
+            <h4>Some key features:</h4>
+            <ul>
+                <li>The user is able to quickly add others’ tags to their own, including or excluding all the scriptures that have already been associated with that tag. Essentially, if the user stumbles upon a tag which has some scriptures that they think are not so relevant, they can copy all those scriptures and then remove them in their personal list.</li>
+                <li>Users of the platform can view scriptures that have been tagged and upvote or downvote the tag’s association to that scripture; this allows the community to improve the accuracy of the tagging by removing irrelevant tags. This would not affect a user’s personal tags and scriptures, only those shown publicly.</li>
+                <li>The app would include functionality for a user to create a list of scriptures which is immutable to all but the author; the list should describe a narrative on a topic. These lists could be randomly featured on the site, allowing for upvotes to indicate interesting content.</li>
+                <li>The app would allow you to read the scriptures in a specific translation (E.G., the NIV).</li>
+            </ul>
+            <p>Additional considerations that could be taken into account down the line are additional bible translations, and support for different languages, a discussion forum or prayer request submissions.</p>
+            <p>The app(s) would include functionality to send you an email (for the web app) or a push notification (for the Android and iOS apps) on the verses that you have tagged.</p>
+            <p>Licensing fees and hosting fees are potential difficulties that may need to be overcome.</p>
+            <h3>Tools and Technologies</h3>
+            <p>For the web app, I would utilise a front end framework such as Angular and a server-side language such as PHP. For the database I would use MySQL. Additional technologies (or alternatives) might include Typescript, Node.js, React, or Vue.</p>
+            <p>Visual Studio Code and Brackets are great editors for many of these languages. For building the Android app I would use Java in Android Studio; for iOS I would use Swift in XCode.</p>
+            <p>A suitable ads framework for each platform (web, iOS, Android) would be required.</p>
+            <p>I already have the necessary devices at my disposal for development & testing: Windows PC, Mac, iPhone and Android smartphone.</p>
+            <h3>Required Skills</h3>
+            <p>An assortment of programming skills will be required to produce the apps, including: HTML, CSS, Javascript, PHP, Javascript frameworks, MySQL, Java, Swift.</p>
+            <p>Also the data architecture will be incredibly important as the app(s) will need to categorise and structure the tags, scriptures, and their associations efficiently in a database.</p>
+            <p>I already possess many of these core skills, however I am not familiar with the aforementioned frameworks for the front end, so I will need to follow some tutorials and courses.</p>
+            <p>I will also need to liaise with companies to procure licenses for their bible translations. I have already contacted the company responsible for licensing the NIV.</p>
+            <h3>Outcome</h3>
+            <p>If the project is successful, it will provide an easy and fun way for users to learn and keep track of scriptures on a variety of different topics. It has potential to expand in the future to other languages or additional translations.</p>
+            <p>An additional benefit is forming a community of people interested in bible study whom are actively contributing to the site just by using it; you may stumble across across public tags for different topics you’ve not studied before, or see scriptures you haven’t read before that are related to topics you’re interested in.</p>
+
+            <h4>Sample Mockups</h4>
         </div>
     </section>
 
     <section id="references" class="block block-reference">
         <div class="wrap reference-wrap"> 
             <header><h2 class="headline reference-headline">References</h2></header>
+            <p>How-To-Study.com. n.d. Visual Learner. [online] Available at: <https://www.how-to-study.com/study-skills-articles/visual-learner.asp> [Accessed 14 June 2020].</p>
+            <p>Hackett, C. and Mcclendon, D., 2017. World’S Largest Religion By Population Is Still Christianity. [online] Pew Research Center. Available at: <https://www.pewresearch.org/fact-tank/2017/04/05/christians-remain-worlds-largest-religious-group-but-they-are-declining-in-europe/> [Accessed 14 June 2020].</p>
         </div>
     </section>
 </div>
