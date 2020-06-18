@@ -37,6 +37,10 @@ body {
     max-width: none;
 }
 
+strong {
+    font-weight: 400;
+}
+
 img {
     max-width: 100%;
 }
@@ -93,6 +97,7 @@ p {
     font-size: 1.4rem;
     overflow: hidden;
     position: relative;
+    margin-bottom: 60px;
 }
 
 .wrap {
@@ -132,7 +137,6 @@ header {
     z-index: 99;
     background: var(--link-colour);
     padding: 0;
-    border-top: 4px solid var(--link-colour);
     font-size: 1.1rem;
     overflow: hidden;
 }
@@ -140,7 +144,6 @@ header {
 .primary-menu a {
     text-decoration: none;
     padding: 20px;
-    padding-bottom: 25px;
     text-transform: uppercase;
     float: left;
     transition: 0.25s;
@@ -149,7 +152,7 @@ header {
 }
 
 .primary-menu a:hover {
-    background: var(--link-colour);
+    background: var(--link-highlight-colour);
     color: white;
     
 }
@@ -213,12 +216,23 @@ header {
     color: white;
 }
 
+.grid-sep {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-column-gap: 4%;
+}
+
 /* ----------------- #intro ----------------- */
 
 .block-intro {
     width: 100vw;
     min-height: 100vh;
-    min-height: calc(100vh - 68px);
     display: flex;
     padding: 0;
     position: relative;
@@ -228,7 +242,6 @@ header {
 .intro-wrap {
     align-self: center;
     position: relative;
-    /* background: white; */
     margin-top: 80px;
     margin-bottom: 80px;
 }
@@ -241,9 +254,6 @@ header {
 
 .intro-container {
     display: block;
-    /* display: grid;
-    grid-template-columns: 48% 48%;
-    grid-column-gap: 4%; */
     text-shadow: 0px 0px 5px black;
     max-width: 1000px;
 }
@@ -274,9 +284,7 @@ header {
 }
 
 .intro-portrait {
-    height: 100%;
     object-fit: cover;
-    max-height: 50%;
     border-radius: 50%;
     max-height: 300px;
     float: right;
@@ -300,8 +308,13 @@ header {
 
 .block-job {
     padding-bottom: 0;
+    background: #eee;
 }
 
+
+.req-exp-title {
+    margin-top: 40px;
+}
 
 
 #tab-job1:checked ~ .tab1  {
@@ -323,14 +336,14 @@ header {
 
 .ac-job .ac-tab {
     margin-top: 20px;
-    background: #eee;
+    background: white;
     padding: 20px;
 }
 
 .job-sep {
     margin-top: 40px;
     margin-bottom: 20px;
-    background: #333;
+    background: #ccc;
 }
 
 
@@ -357,13 +370,6 @@ header {
     grid-column-gap: 4%;
     display: grid;
     position: relative;
-}
-
-.job-wrap .grid-item-1 {
-    background: white;
-    padding: 20px;
-}
-.job-wrap .grid-item-2 {
     color: white;
 }
 
@@ -405,9 +411,41 @@ header {
     display: block;
 }
 .ac-graph .ac-tab {
-    background: #eee;
     padding: 20px;
     padding-left: 0;
+}
+
+.ac-graph .ac-tab-label {
+    background: #ddd;
+}
+
+
+.ac-graph .ac-tab-label:not(:checked):hover {
+    background: #ccc;
+}
+
+.ac-graph .ac-tab-input:checked + .ac-tab-label {
+    background: var(--link-colour);
+    color: white;
+}
+
+.briggs-link, .learning-style-link {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.briggs-attributes-para {
+    margin-bottom: 0px;
+}
+
+.ac-big-5-container {
+    /* display: grid;
+    grid-template-columns: 68% 28%;
+    grid-column-gap: 4%; */
+}
+.big-5-item {
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 
@@ -416,14 +454,18 @@ header {
 
 .block-project {
     position: relative;
+    color: white;
+}
+
+.block-project li {
+    margin-top: 30px;
+}
+.block-project li:first-of-type {
+    margin-top: 0;
 }
 
 .project-wrap {
     position: relative;
-}
-
-.project-headline {
-    color: white;
 }
 
 .project-background-image {
@@ -438,3 +480,46 @@ header {
     background-image: url("images/project-hi-res.jpg");
 }
 
+.project-item {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.project-headline, .project-desc-headline, .project-outcome-headline {
+    border-bottom: 4px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+}
+
+.project-mockup-image {
+    box-shadow: 0px 0px 5px #000;
+}
+
+
+
+/* ----------------- #references ----------------- */
+
+.block-reference {
+    background: var(--link-colour);
+    color: white;
+}
+
+.reference-headline {
+    margin-bottom: 40px;
+}
+
+.reference-wrap {
+    max-width: 820px;
+}
+
+.block-reference p {
+    padding-bottom: 30px;
+    border-bottom: 2px solid white;
+}
+.block-reference p:last-of-type {
+    border-bottom: none;
+}
+
+.reference-wrap a {
+    color: white;
+}
