@@ -1,12 +1,16 @@
-/* list
+/*
 
 setup
 fonts
+animations
 general
-intro
-
+intro section
+about section
+job section
+profile section
+project section
+references section
 media queries
-
 
 */
 
@@ -160,7 +164,6 @@ p {
 }
 
 header {
-    /* padding-top: 20px; */
     text-align: center;
 }
 
@@ -291,7 +294,7 @@ header {
 .mb-10 {
     margin-bottom: 10px;
 }
-/* ----------------- #intro ----------------- */
+/* ----------------- #intro section ----------------- */
 
 .block-intro {
     width: 100%;
@@ -354,7 +357,7 @@ header {
     margin-left: 50px;
 }
 
-/* ----------------- #about ----------------- */
+/* ----------------- #about section ----------------- */
 
 .block-about {
     background: #eee;
@@ -376,7 +379,7 @@ header {
     margin-bottom: 30px;
 }
 
-/* ----------------- #job ----------------- */
+/* ----------------- #job section ----------------- */
 
 .block-job {
     padding-bottom: 0;
@@ -396,10 +399,6 @@ header {
     display: block;
 }
 
-/* .accordion-job ~ #tab-job1 .tab1 {
-    display: block;
-} */
-
 .job-grid-container {
     display: grid;
     grid-template-columns: 48% 48%;
@@ -417,7 +416,6 @@ header {
     margin-bottom: 20px;
     background: #ccc;
 }
-
 
 /* Future */
 
@@ -461,10 +459,7 @@ header {
     }
 }
 
-
-
-
-/* ----------------- #profile ----------------- */
+/* ----------------- #profile section ----------------- */
 
 .block-profile {
     background: #eee;
@@ -522,7 +517,7 @@ header {
 
 
 
-/* ----------------- #project ----------------- */
+/* ----------------- #project section ----------------- */
 
 .block-project {
     position: relative;
@@ -569,7 +564,7 @@ header {
 
 
 
-/* ----------------- #references ----------------- */
+/* ----------------- #references section ----------------- */
 
 .block-reference {
     background: var(--link-colour);
@@ -653,9 +648,6 @@ header {
     }
     .primary-menu {
         text-align: center;
-    }
-    .primary-menu a {
-
     }
     .menu-wrap {
         display: flex;
