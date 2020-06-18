@@ -2,10 +2,26 @@ var scrollLastDate = new Date();
 var animationElements = document.getElementsByClassName("animation-fade-in-slide-up");
 
 
+var triggeredOnLoad = false;
 
+window.addEventListener("load", function(e) {
+    console.log("load");
+    if (!triggeredOnLoad) {
+        triggerAnimations();
+    }
+});
 
 window.addEventListener("DOMContentLoaded", function(e) {
-    triggerAnimations();
+    console.log("DOMContentLoaded");
+    if (!triggeredOnLoad) {
+        triggerAnimations();
+    }
+});
+
+document.addEventListener('readystatechange', event => { 
+    if (event.target.readyState === "complete") {
+        // alert("hi 2");
+    }
 });
 
 window.addEventListener("scroll", function(e) {
@@ -23,8 +39,15 @@ window.addEventListener("scroll", function(e) {
 });
 
 function triggerAnimations() {
+    
     var scrollY = window.scrollY;
+    if (scrollY != 0) {
+        triggeredOnLoad = true;
+    }
     var winHeight = window.innerHeight;
+
+    console.log("scrollY" + scrollY);
+    console.log("winHeight" + winHeight);
 
     for (var i = 0; i < animationElements.length; i++) {
         var element = animationElements[i];

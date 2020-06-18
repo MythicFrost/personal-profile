@@ -5,6 +5,8 @@ fonts
 general
 intro
 
+media queries
+
 
 */
 
@@ -191,8 +193,6 @@ header {
     padding: 0;
     font-size: 1.1rem;
     overflow: hidden;
-
-    display: none;
 }
 
 .primary-menu a {
@@ -220,7 +220,7 @@ header {
 
 .ac-tab-label {
     user-select: none;
-    background: #eee;
+    background: #ddd;
     color: black;
     padding: 10px 20px;
     float: left;
@@ -268,6 +268,7 @@ header {
 .button:hover, .button:focus {
     background: var(--link-highlight-colour);
     color: white;
+    text-decoration: none;
 }
 
 .grid-sep {
@@ -282,6 +283,8 @@ header {
     grid-column-gap: 4%;
 }
 
+/* Declare some classes to easily set margin bottom */
+
 .mb-0 {
     margin-bottom: 0;
 }
@@ -291,7 +294,7 @@ header {
 /* ----------------- #intro ----------------- */
 
 .block-intro {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     padding: 0;
@@ -366,6 +369,10 @@ header {
 
 .ai-upscaler-link {
     display: inline-block;
+    margin-bottom: 30px;
+}
+
+.about-me-headline {
     margin-bottom: 30px;
 }
 
@@ -503,15 +510,15 @@ header {
     margin-bottom: 0px;
 }
 
-.ac-big-5-container {
-    /* display: grid;
-    grid-template-columns: 68% 28%;
-    grid-column-gap: 4%; */
-}
 .big-5-item {
     grid-column-start: 1;
     grid-column-end: 3;
 }
+
+.personal-profile-headline {
+    margin-bottom: 30px;
+}
+
 
 
 
@@ -588,3 +595,74 @@ header {
 .reference-wrap a {
     color: white;
 }
+
+
+
+/* ----------------- #media ----------------- */
+
+@media screen and (max-width: 1300px) {
+    .wrap {
+        max-width: 1060px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .wrap { 
+        max-width: none;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .about-container, .block-interests .grid-container, .job-grid-container, .job-wrap, .profile-container, .project-wrap .grid-container {
+        grid-template-columns: 100%;
+    }
+
+    .grid-sep {
+        display: none;
+    }
+
+    .image-item {
+        margin-bottom: 40px;
+    }
+    .job-button {
+        margin-bottom: 40px;
+    }
+
+    .big-5-item, .project-item {
+        grid-column-start: auto;
+        grid-column-end: auto;
+    }
+    .profile-learning-style-image {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .primary-menu a {
+        padding: 10px;
+        text-transform: lowercase;
+    }
+    .site-content {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .intro-portrait {
+        float: none;
+        margin-bottom: 40px;
+        display: block;
+        margin-left: auto; margin-right: auto;
+    }
+    .primary-menu {
+        text-align: center;
+    }
+    .primary-menu a {
+
+    }
+    .menu-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+
