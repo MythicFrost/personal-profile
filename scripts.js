@@ -1,12 +1,14 @@
 var scrollLastDate = new Date();
 var animationElements = document.getElementsByClassName("animation-fade-in-slide-up");
-
-
 var triggeredOnLoad = false;
+
+var siteHeight = -1;
+var menuWidth = -1;
 
 window.addEventListener("load", function(e) { //fallback in case DOMContentLoaded doesn't work
     if (!triggeredOnLoad) {
         triggerAnimations();
+        
     }
 });
 
@@ -25,6 +27,9 @@ window.addEventListener("scroll", function(e) {
         return;
     }
     triggerAnimations();
+
+    var scrollY = window.scrollY;
+    var prog = siteHeight / scrollY;
     scrollLastDate = new Date();
 });
 
