@@ -454,7 +454,7 @@ header {
 }
 @media only screen and (min-width: 1401px) {
     .job-background-image {
-        background-image: url('images/code-hi-res.jpg');
+        background-image: url('images/code-med-res.jpg'); /* decided not to use the hi-res as the file size was too large */
     }
 }
 
