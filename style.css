@@ -543,7 +543,7 @@ header {
     right: 0;
     background-attachment: fixed;
     background-size: cover;
-    background-image: url("images/project-hi-res.jpg");
+    background-image: url("images/project-med-res.jpg");
 }
 
 .project-item {
