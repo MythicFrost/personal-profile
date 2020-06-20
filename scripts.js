@@ -13,7 +13,6 @@ window.addEventListener("load", function(e) { //fallback in case DOMContentLoade
 });
 
 window.addEventListener("DOMContentLoaded", function(e) { //this doesn't work on every browser
-    console.log("DOMContentLoaded");
     if (!triggeredOnLoad) {
         triggerAnimations();
     }
@@ -28,8 +27,6 @@ window.addEventListener("scroll", function(e) {
     }
     triggerAnimations();
 
-    var scrollY = window.scrollY;
-    var prog = siteHeight / scrollY;
     scrollLastDate = new Date();
 });
 
