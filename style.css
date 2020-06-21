@@ -549,6 +549,10 @@ p {
     color: white;
 }
 
+.block-reference p {
+    text-align: left;
+}
+
 
 
 /* ----------------- #media ----------------- */
